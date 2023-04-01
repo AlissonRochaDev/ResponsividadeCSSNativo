@@ -1,0 +1,165 @@
+/* Variáveis do CSS */
+:root{
+    /* Variaveis de Cor. */
+    --cor-preto: #000000;
+    --cor-branco: #ffffff;
+    --cor-laranja: #ff3c00;
+    --cor-azul: #2bbcfa;
+    --cor-cinza-claro: #e6e6e6;
+    --cor-verde-claro: #108a00;
+    --cor-verde-escuro: #0d7000;
+
+    /* Variaveis para Fonte. */
+    --font-tahoma: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --format-align: center;
+}
+/* ============================= */
+
+body{
+    font-family: var(--font-tahoma);
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+#topo{
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.tituloText{
+    color: var(--cor-branco);
+}
+
+h1{
+    margin: 0px;
+}
+
+#container{
+    background-color: var(--cor-azul);
+    padding: 2.6rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgusuario{
+    width: 300px;
+    border-radius: 50%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 420px;
+    height: 45px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 5px;
+}
+
+input:hover{
+    background-color: var(--cor-cinza-claro);
+}
+
+.campText{
+    width: 420px;
+    height: 80px;
+    font-family: var(--font-tahoma);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 5px;
+}
+
+.campText:hover{
+    background-color: var(--cor-cinza-claro);
+}
+
+.btn{
+    width: 120px;
+    height: 55px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background-color: var(--cor-verde-claro);
+    color: var(--cor-branco);
+    cursor: pointer;
+    margin: 1rem 0rem;
+}
+
+.btn:hover{
+    background-color: var(--cor-verde-escuro);
+}
+
+#final{
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    text-align: var(--format-align);
+    padding: 1.6rem 0rem;
+}
+
+.copy{
+    font-size: 0.6rem;
+}
+
+/* Responsividade */
+/* Tamanho de Tela para celulares Pequenos: De 320px até 568px. */
+/* Tamanho de Tela para celulares Grandes: De 568 até 768px. */
+/* Tamanho de Tela para Tablets: De 768px até 998px. */
+/* Tamanho de Tela para Desktops e Notebooks: Mínimo 998px. */
+@media screen and (min-width: 998px){
+    #container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .campText{
+        width: 490px;
+    }
+}
+
+@media screen and (max-width: 568px){
+    #topo{
+        padding: 0.6rem;
+    }
+
+    #container{
+        padding: 0.6rem;
+    }
+
+    .formulario{
+        width: 100%;
+        padding: 0rem 0.8rem 0rem 0.4rem;
+    }
+
+    .imgusuario{
+        width: 100%;
+        max-width: 200px;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    .campText{
+        width: 100%;
+    }
+
+    .btnAlign{
+        display: flex;
+        justify-content: center;
+    }
+}
